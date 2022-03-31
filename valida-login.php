@@ -3,7 +3,7 @@
     include_once("conexao.php");
 
     //RECEBE DADOS POST
-    $email= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+    $email= strtolower(strtoupper(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL))); // FILTRA EMAIL E CONVERTE EM  LETRAS minúsculas.
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
     //FIM RECEBE DADOS POST
 
