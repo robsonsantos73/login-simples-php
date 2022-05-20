@@ -53,6 +53,12 @@
                         <tr>
                             <td style="padding:30px; text-align:center;">
                                 <input type="password" name="senha" id="senha" class="inputTxt" required placeholder="Senha">
+                                <div style="display:flex; justify-content:center; align-items:center;">
+                                    <div style="display:flex; flex-direction:row; align-items:center; justify-content:center;" onclick="verSenha()">
+                                        <img src="images/olho.png" id="versenha" alt="ver senha" width="20" height="20">
+                                        <p style="font-size:12px;">Ver senha</p>
+                                    </div>
+                                </div>
                             </td>
                         <tr>
                         <!--FIM SENHA-->
@@ -81,6 +87,19 @@
                 </table>
             </div>
         </div>
+
+        <script>
+            function verSenha() {
+                var x = document.getElementById("senha");
+                if (x.type === "password") {
+                    x.type = "text";
+                    document.getElementById("versenha").src="images/olho2.png";
+                } else {
+                    x.type = "password";
+                    document.getElementById("versenha").src="images/olho.png";
+                }
+            }
+        </script>
         
     </body>
 </html>
