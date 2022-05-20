@@ -94,9 +94,11 @@
                 if (x.type === "password") {
                     x.type = "text";
                     document.getElementById("versenha").src="images/olho2.png";
+                    document.getElementById("senha").focus();
                 } else {
                     x.type = "password";
                     document.getElementById("versenha").src="images/olho.png";
+                    document.getElementById("senha").focus();
                 }
             }
         </script>
